@@ -1,3 +1,4 @@
+/* ==== NAVBAR GENERAL ==== */
 .header {
   position: fixed;
   top: 0;
@@ -10,6 +11,7 @@
   transition: all 0.3s ease;
 }
 
+/* ==== CONTENEDOR PRINCIPAL ==== */
 .nav {
   width: 90%;
   max-width: 1200px;
@@ -19,7 +21,7 @@
   align-items: center;
 }
 
-/* LOGO */
+/* ==== LOGO ==== */
 .nav__logo {
   display: flex;
   align-items: center;
@@ -41,21 +43,25 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* MENÚ */
+/* ==== MENÚ ==== */
 .nav__menu {
   display: flex;
   align-items: center;
-  gap: 1.8rem;
+  gap: 2rem; /* más espacio entre opciones */
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__link {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  padding: 0.4rem 0.8rem;
-  transition: all 0.3s ease;
+  padding: 0.6rem 1rem; /* más uniforme */
   border-radius: 5px;
+  transition: all 0.3s ease;
+  line-height: 1; /* evita salto de línea */
+  white-space: nowrap; /* fuerza todo en una línea */
 }
 
 .nav__link:hover,
@@ -64,7 +70,7 @@
   color: #c7974f;
 }
 
-/* CTA */
+/* ==== BOTÓN CTA ==== */
 .nav__link--cta {
   background-color: #c7974f;
   color: #2c1810 !important;
@@ -72,13 +78,14 @@
   padding: 0.6rem 1.2rem;
   font-weight: 600;
   transition: 0.3s ease;
+  white-space: nowrap; /* evita que "Ordenar ahora" se divida */
 }
 
 .nav__link--cta:hover {
   background-color: #b1843f;
 }
 
-/* CARRITO */
+/* ==== CARRITO ==== */
 .nav__link--cart {
   position: relative;
   font-size: 1.4rem;
@@ -96,7 +103,7 @@
   border-radius: 50%;
 }
 
-/* RESPONSIVE */
+/* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
   .nav__toggle {
     display: block;

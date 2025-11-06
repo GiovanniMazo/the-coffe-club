@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Hero.css';
 
 const Hero = () => {
-  const bannerUrl = process.env.PUBLIC_URL + '/images/banner.jpg';
-  const overlay = 'linear-gradient(rgba(44,24,16,0.45), rgba(44,24,16,0.45))';
+  const bannerUrl = '/images/banner2.jpg';
+  const overlay = 'linear-gradient(rgba(44,24,16,0.5), rgba(44,24,16,0.5))';
 
   return (
     <section
@@ -12,22 +13,29 @@ const Hero = () => {
         backgroundImage: `${overlay}, url(${bannerUrl})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed', // 💫 efecto parallax
       }}
     >
       <div className="hero__container container">
-        <h1 className="hero__title">Descubre nuevos sabores y aromas cada mañana</h1>
-        <p className="hero__paragraph">Elige ser feliz tomando café</p>
-        <div className="hero__buttons">
-          <Link
-            to="/products"
-            className="cta cta--primary"
-          >
+        <h1 className="hero__title animate-fade-up">
+          Descubre nuevos sabores <br /> y aromas cada mañana
+        </h1>
+
+        <p className="hero__paragraph animate-fade-up delay-1">
+          Elige ser feliz tomando café ☕
+        </p>
+
+        <div className="hero__buttons animate-fade-up delay-2">
+          <Link to="/products" className="cta cta--primary">
             Ver productos
           </Link>
-          <a href="#about" className="cta cta--secondary">Conócenos</a>
+          <a href="#about" className="cta cta--secondary">
+            Conócenos
+          </a>
         </div>
-        <div className="hero__scroll">
+
+        <div className="hero__scroll animate-fade-up delay-3">
           <div className="hero__scroll-icon"></div>
           <span>Desliza para ver más</span>
         </div>

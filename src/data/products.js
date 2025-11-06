@@ -1,66 +1,73 @@
-import product1 from '../assets/products/product1.jpg';
-import product2 from '../assets/products/product2.jpg';
-import product3 from '../assets/products/product3.jpg';
-
+// ☕ Lista de productos con imágenes desde /public/images/products/
 export const products = [
   {
     id: 1,
-    name: "Café Arábica Premium",
-    description: "Café de altura con notas de chocolate y frutos rojos",
-    price: 15.99,
-    image: product1,
+    name: "Café Colombiano Premium",
+    description: "Granos selectos de las montañas colombianas, con cuerpo balanceado y notas dulces.",
+    price: 57000,
+    image: "/images/products/CafeColombia.jpg",
     category: "granos",
     origin: "Colombia",
     roastLevel: "Medio"
   },
   {
     id: 2,
-    name: "Espresso Blend",
-    description: "Mezcla perfecta para espresso con cuerpo intenso",
-    price: 14.99,
-    image: product2,
+    name: "Café Espresso Italiano",
+    description: "Intenso y aromático, ideal para una taza de espresso perfecta.",
+    price: 38000,
+    image: "/images/products/Cafetaliano.jpg",
     category: "granos",
-    origin: "Brasil, Ethiopia",
+    origin: "Italia",
     roastLevel: "Oscuro"
   },
   {
     id: 3,
-    name: "Café Orgánico",
-    description: "Cultivado naturalmente sin pesticidas",
-    price: 17.99,
-    image: product3,
-    category: "granos",
-    origin: "Perú",
+    name: "Café con Leche de Coco",
+    description: "Suave fusión tropical con notas de coco y vainilla natural.",
+    price: 43000,
+    image: "/images/products/manos-bronceadas-femeninas-sostiene-un-vaso-de-cafe-con-leche-de-coco.jpg",
+    category: "especialidad",
+    origin: "Brasil",
     roastLevel: "Medio-Claro"
   },
   {
     id: 4,
-    name: "Café Descafeinado",
-    description: "Todo el sabor sin cafeína",
-    price: 16.99,
-    image: product1,
-    category: "descafeinado",
-    origin: "México",
-    roastLevel: "Medio"
-  },
-  {
-    id: 5,
-    name: "Café Molido Clásico",
-    description: "Blend tradicional, perfecto para cafeteras de filtro",
-    price: 12.99,
-    image: product2,
-    category: "molido",
+    name: "Café de Guatemala",
+    description: "Aromas a cacao con matices frutales, ideal para los amantes del café equilibrado.",
+    price: 76100,
+    image: "/images/products/nathan-dumlao-dvuHNTJlxsg-unsplash.jpg",
+    category: "granos",
     origin: "Guatemala",
     roastLevel: "Medio"
   },
   {
+    id: 5,
+    name: "Café Sumatra Mandheling",
+    description: "Café robusto, terroso y con notas especiadas de la isla de Sumatra.",
+    price: 32600,
+    image: "/images/products/nathan-dumlao-So7cyDtlmls-unsplash.jpg",
+    category: "granos",
+    origin: "Indonesia",
+    roastLevel: "Oscuro"
+  },
+  {
     id: 6,
-    name: "Café en Cápsulas",
-    description: "Compatibles con máquinas Nespresso®",
-    price: 19.99,
-    image: product3,
-    category: "capsulas",
-    origin: "Varios",
-    roastLevel: "Variado"
+    name: "Café Latte Clásico",
+    description: "La combinación perfecta de espresso y leche espumosa.",
+    price: 65200,
+    image: "/images/products/primer-plano-de-cafe-capuchino-con-latte-de-arte-en-la-mesa-de-madera.jpg",
+    category: "bebida",
+    origin: "Varios orígenes",
+    roastLevel: "Medio"
+  },
+  {
+    id: 7,
+    name: "Café de la Casa",
+    description: "Nuestra mezcla exclusiva, creada para quienes disfrutan cada sorbo.",
+    price: 33000,
+    image: "/images/products/tabitha-turner-3n3mPoGko8g-unsplash.jpg",
+    category: "molido",
+    origin: "Honduras",
+    roastLevel: "Medio"
   }
 ];
