@@ -1,2 +1,15 @@
-node_modules
-node_modules
+# Node.js dependencies
+node_modules/
+npm-debug.log
+.env
+
+# Build directories
+dist/
+build/
+
+# Editor settings
+.vscode/
+.DS_Store
+
+# Logs
+*.log

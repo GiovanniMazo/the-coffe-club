@@ -15,3 +15,15 @@ main {
 .home-page .page-content {
   padding-top: 0;
 }
+
+/* Asegurarnos que el contenido es interactivo */
+main, 
+.hero,
+.about-section,
+.contact-section,
+.blog-section,
+.recipes-section,
+.checkout-section {
+  position: relative;
+  z-index: 2; /* Mayor que el header para asegurar la interactividad */
+}

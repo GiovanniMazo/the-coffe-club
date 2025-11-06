@@ -1,6 +1,7 @@
 {
   "name": "coffeeclub-backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "API REST para The Coffee Club con SQL Server",
   "main": "server.js",
   "scripts": {
