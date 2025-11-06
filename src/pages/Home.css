@@ -1,0 +1,34 @@
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fdf9f4;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c1810;
+  margin-bottom: 20px;
+}
+
+.about__paragraph {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #5a4636;
+}
+
+.cta--more {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #c7974f;
+  color: white;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cta--more:hover {
+  background-color: #b1843f;
+}

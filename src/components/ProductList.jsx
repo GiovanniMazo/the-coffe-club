@@ -20,7 +20,7 @@ const ProductList = ({ viewMode = 'grid' }) => {
 
   const addToCart = (product) => {
     setCart([...cart, product]);
-    // Mostrar animación
+    // M animación
     setIsCartVisible(true);
     setTimeout(() => setIsCartVisible(false), 2000);
   };

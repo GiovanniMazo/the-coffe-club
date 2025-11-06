@@ -10,19 +10,17 @@ const Products = () => {
   const [cart, setCart] = useState([]);
   const [isCartVisible, setIsCartVisible] = useState(false);
 
-  // ✅ Función para agregar productos al carrito
+  // ✅ Agregar producto al carrito
   const addToCart = (product) => {
     setCart((prev) => [...prev, product]);
     setIsCartVisible(true);
-
-    // Ocultar notificación luego de 2 segundos
     setTimeout(() => setIsCartVisible(false), 2000);
   };
 
-  // ✅ Obtener categorías dinámicamente
+  // ✅ Categorías dinámicas (extraídas del array products)
   const categories = ['all', ...new Set(products.map((p) => p.category))];
 
-  // ✅ Filtrar y ordenar productos
+  // ✅ Filtro + ordenamiento
   const filteredProducts = products
     .filter(
       (p) => selectedCategory === 'all' || p.category === selectedCategory
@@ -36,29 +34,17 @@ const Products = () => {
 
   return (
     <div className="products-page">
-      {/* 🟤 Encabezado de sección con fondo dinámico */}
-      <div
-        className="products-hero"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 24, 16, 0.7)),
-            url('/images/products/CafeColombia.jpg')
-          `,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+      {/* 🟤 Encabezado con imagen y título */}
+      <div className="products-hero">
         <h1>Nuestros Productos</h1>
         <p>Descubre nuestra selección de cafés premium</p>
       </div>
 
       <div className="container">
-        {/* 🎛️ Controles de filtrado y vista */}
+        {/* 🔸 Controles de filtrado y vista */}
         <div className="products-controls">
-          {/* Filtros */}
           <div className="products-filters">
-            {/* Filtro de categoría */}
+            {/* Filtro por categoría */}
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
@@ -66,12 +52,14 @@ const Products = () => {
             >
               {categories.map((cat) => (
                 <option key={cat} value={cat}>
-                  {cat.charAt(0).toUpperCase() + cat.slice(1)}
+                  {cat === 'all'
+                    ? 'Todos'
+                    : cat.charAt(0).toUpperCase() + cat.slice(1)}
                 </option>
               ))}
             </select>
 
-            {/* Filtro de orden */}
+            {/* Ordenamiento */}
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
@@ -83,19 +71,19 @@ const Products = () => {
             </select>
           </div>
 
-          {/* Botones de cambio de vista */}
+          {/* Botones de vista */}
           <div className="view-toggle">
             <button
               onClick={() => setViewMode('grid')}
               className={`view-button ${viewMode === 'grid' ? 'active' : ''}`}
             >
-              Grid
+              🗃️ Cuadrícula
             </button>
             <button
               onClick={() => setViewMode('list')}
               className={`view-button ${viewMode === 'list' ? 'active' : ''}`}
             >
-              Lista
+              📄 Lista
             </button>
           </div>
         </div>
@@ -106,15 +94,15 @@ const Products = () => {
             <ProductCard
               key={product.id}
               product={product}
-              onAddToCart={addToCart} // ✅ Pasamos la función al hijo
+              onAddToCart={addToCart} // ✅ Se pasa al componente hijo
             />
           ))}
         </div>
       </div>
 
-      {/* 🟢 Notificación visual */}
+      {/* 🟢 Notificación visual del carrito */}
       <div className={`cart-notification ${isCartVisible ? 'active' : ''}`}>
-        ¡Producto agregado al carrito!
+        ☕ Producto agregado al carrito
       </div>
     </div>
   );

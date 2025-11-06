@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
-  const bannerUrl = '/images/banner2.jpg';
+  const bannerUrl = '/images/banner.jpg';
   const overlay = 'linear-gradient(rgba(44,24,16,0.5), rgba(44,24,16,0.5))';
 
   return (
@@ -33,11 +33,6 @@ const Hero = () => {
           <a href="#about" className="cta cta--secondary">
             Conócenos
           </a>
-        </div>
-
-        <div className="hero__scroll animate-fade-up delay-3">
-          <div className="hero__scroll-icon"></div>
-          <span>Desliza para ver más</span>
         </div>
       </div>
     </section>
